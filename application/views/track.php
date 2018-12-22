@@ -3,13 +3,10 @@
     <h2 align="center">Track</h2>
     <p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack
         on top of each other instead of next to each other.</p>
+    id, username, subject, room, object, detail, timestamp<br>
     <?php
-    for($x=0; $x<4; $x++) {
-//        if($x%0==2) echo '<br>';
-        echo "row\t row\t row\t row\t row\t row\t row\t row\t row\t row\t row\t row\t row\t row\t row\t row\t row\t row<br>";
+    foreach ($repairs as $item) {
+        echo $item['id'] . "\t" . $item['username'] . "\t" . $item['subject'] . "\t" . $item['room'] . "\t" . $item['object'] . "\t" . $item['detail']. "\t" . $item['timestamp']. "<br>";
     }
     ?>
-
-
-</div>
 </div>
