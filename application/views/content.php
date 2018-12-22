@@ -8,7 +8,7 @@
                     <span class="section-heading-upper">Fresh Coffee</span>
                     <span class="section-heading-lower">Worth Drinking</span>
                 </h2>
-                <p class="mb-3">Every cup of our quality artisan coffee starts with locally sourced, hand picked ingredients. Once you try it, our coffee will be a blissful addition to your everyday morning routine - we guarantee it!
+                <p class=" padding-bottom: 20px">Every cup of our quality artisan coffee starts with locally sourced, hand picked ingredients. Once you try it, our coffee will be a blissful addition to your everyday morning routine - we guarantee it!
                 </p><br>
                 <div class="intro-button mx-auto">
                     <a class="btn btn-primary btn-xl" href="<?= base_url('signup');?>">Signup and Booking</a>
@@ -18,7 +18,6 @@
     </section>
 
 </div>
-
 <!--    <!-- CONTENT -->
 <!--    --><?php //foreach ($posts as $item) : ?>
 <!--        <article class="post">-->

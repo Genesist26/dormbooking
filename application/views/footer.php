@@ -1,5 +1,6 @@
-
+<div class="site-footer">
 <footer>
+
     <a name="footer"></a>
     <div class="footer_text">
         <div>
@@ -7,7 +8,6 @@
             <p>
 <!--                <img src="public/images/about-minion.jpeg" style="float: right">-->
 <!--                href="--><?//= base_url("public/css/weblog.css"); ?><!--"-->
-                <img src="<?= base_url("public/images/about-minion.jpeg"); ?>" style="float: right">
                 FOOTER
             </p>
         </div>
