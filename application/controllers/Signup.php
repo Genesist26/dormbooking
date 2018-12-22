@@ -51,22 +51,4 @@ class Signup extends CI_Controller {
         }
 
     }
-
-    public function add_to_database($username, $password, $question, $answer)
-    {
-        // Load post_model.php
-        $this->load->model('user_model');
-
-//        $username = $this->input->post('username');
-
-
-        if ($this->user_model->login($username,$password))
-        {
-            $this->session->set_userdata('username', $username);
-            $this->session->set_userdata('logged_in','1');
-            return TRUE;
-        }
-        $this->form_validation->set_message('check_database', 'Invalid username or password.');
-        return FALSE;
-    }
 }

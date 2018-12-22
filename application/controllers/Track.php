@@ -12,8 +12,10 @@ class Track extends CI_Controller {
 
     public function index()
     {
+        $this->load->model('repair_model');
+        $data['repairs'] = $this->repair_model->get_all_repair();
         $this->load->view('header');
-        $this->load->view('track');
+        $this->load->view('track', $data);
         $this->load->view('footer');
 
 //        $this->load->view('welcome_message');

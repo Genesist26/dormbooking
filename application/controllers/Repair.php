@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Service extends CI_Controller {
+class Repair extends CI_Controller {
 
     public function __construct()
     {
@@ -13,13 +13,23 @@ class Service extends CI_Controller {
     public function index()
     {
         if(isset($_POST['subject'])){
+            $submit_data['username'] = $this->session->userdata('username');
+            $submit_data['subject'] = $this->input->post('subject', TRUE);
+            $submit_data['room'] = $this->input->post('room', TRUE);
+            $submit_data['object'] = $this->input->post('object', TRUE);
+            $submit_data['detail'] = $this->input->post('detail', TRUE);
+            unset($_POST);
+
+            $this->load->model('repair_model');
+            $this->repair_model->insert_data($submit_data);
+
             $data['message'] = 'We have received your request.';
             $this->load->view('header');
             $this->load->view('message', $data);
             $this->load->view('footer');
         }else{
             $this->load->view('header');
-            $this->load->view('service');
+            $this->load->view('Repair');
             $this->load->view('footer');
         }
 
