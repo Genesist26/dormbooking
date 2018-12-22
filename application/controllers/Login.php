@@ -29,7 +29,13 @@ class Login extends CI_Controller {
         }
         else
         {
-            redirect('main', 'refresh');
+            $username = $this->session->userdata('username');
+            if($username == 'admin'){
+                redirect('admin_dashboard', 'refresh');
+            }else{
+                redirect('user_dashboard', 'refresh');
+            }
+
         }
     }
 
