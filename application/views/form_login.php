@@ -1,4 +1,5 @@
 <!-- CONTENT -->
+<link rel="stylesheet" href="<?= base_url("public/css/login.css"); ?>">
 <main>
     <div id="login_container">
         <center><h2>Login</h2></center>

@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="public/css/homepate.css">
-<section class="page-section">
+<div class="site-main">
+    <section class="page-section">
         <div class="intro">
             <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="public/images/intro.jpg" alt="">
             <div class="intro-text left-0 text-center bg-faded p-5 rounded">
@@ -10,12 +11,13 @@
                 <p class="mb-3">Every cup of our quality artisan coffee starts with locally sourced, hand picked ingredients. Once you try it, our coffee will be a blissful addition to your everyday morning routine - we guarantee it!
                 </p><br>
                 <div class="intro-button mx-auto">
-                    <a class="btn btn-primary btn-xl" href="#">Visit Us Today!</a>
+                    <a class="btn btn-primary btn-xl" href="<?= base_url('signup');?>">Signup and Booking</a>
                 </div>
             </div>
         </div>
-</section>
-<br><br>
+    </section>
+
+</div>
 
 <!--    <!-- CONTENT -->
 <!--    --><?php //foreach ($posts as $item) : ?>

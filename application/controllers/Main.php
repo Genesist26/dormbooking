@@ -14,6 +14,7 @@ class Main extends CI_Controller {
     {
         $this->load->view('header');
         $this->load->view('content');
+//        $this->load->view('booking1');
         $this->load->view('footer');
 //        $this->load->view('welcome_message');
 

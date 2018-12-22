@@ -6,7 +6,7 @@
     <title>Microblog</title>
 
     <link rel="stylesheet" href="<?= base_url("public/css/style.css"); ?>">
-    <link rel="stylesheet" href="<?= base_url("public/css/login.css"); ?>">
+
     <link rel="stylesheet" href="<?= base_url("public/css/weblog.css"); ?>" media="screen">
     <link href="https://fonts.googleapis.com/css?family=Taviraj:300" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
