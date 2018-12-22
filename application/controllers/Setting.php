@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Booking extends CI_Controller {
+class Setting extends CI_Controller {
 
     public function __construct()
     {
@@ -20,7 +20,7 @@ class Booking extends CI_Controller {
             unset($_POST);
         }else{
             $this->load->view('header');
-            $this->load->view('booking');
+            $this->load->view('setting');
             $this->load->view('footer');
         }
 

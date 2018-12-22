@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Main extends CI_Controller {
+class Track extends CI_Controller {
 
     public function __construct()
     {
@@ -13,18 +13,7 @@ class Main extends CI_Controller {
     public function index()
     {
         $this->load->view('header');
-        if ( $this->session->logged_in ){
-            $username = $this->session->userdata('username');
-            if($this->session->userdata('username') == 'admin'){
-
-                $this->load->view('admin_dashboard');
-            }else{
-                $this->load->view('user_dashboard');
-            }
-        }else{
-            $this->load->view('content');
-
-        }
+        $this->load->view('track');
         $this->load->view('footer');
 
 //        $this->load->view('welcome_message');

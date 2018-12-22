@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Main extends CI_Controller {
+class Information extends CI_Controller {
 
     public function __construct()
     {
@@ -12,20 +12,16 @@ class Main extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('header');
-        if ( $this->session->logged_in ){
-            $username = $this->session->userdata('username');
-            if($this->session->userdata('username') == 'admin'){
-
-                $this->load->view('admin_dashboard');
-            }else{
-                $this->load->view('user_dashboard');
-            }
+        if(isset($_POST['subject'])){
+            $data['message'] = 'We have received your request.';
+            $this->load->view('header');
+            $this->load->view('message', $data);
+            $this->load->view('footer');
         }else{
-            $this->load->view('content');
-
+            $this->load->view('header');
+            $this->load->view('information');
+            $this->load->view('footer');
         }
-        $this->load->view('footer');
 
 //        $this->load->view('welcome_message');
 

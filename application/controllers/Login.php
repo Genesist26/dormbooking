@@ -25,17 +25,10 @@ class Login extends CI_Controller {
             $this->load->view('content');
             $this->load->view('form_login');
             $this->load->view('footer');
-
         }
         else
         {
-            $username = $this->session->userdata('username');
-            if($username == 'admin'){
-                redirect('admin_dashboard', 'refresh');
-            }else{
-                redirect('user_dashboard', 'refresh');
-            }
-
+            redirect('main', 'refresh');
         }
     }
 
@@ -52,7 +45,7 @@ class Login extends CI_Controller {
         $username = $this->input->post('username');
 
 
-        if ($this->user_model->login($username,$password))
+        if ($this->user_model->login($username, $password))
         {
             $this->session->set_userdata('username', $username);
             $this->session->set_userdata('logged_in','1');

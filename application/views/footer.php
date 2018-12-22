@@ -4,11 +4,10 @@
     <a name="footer"></a>
     <div class="footer_text">
         <div>
-            <h3>THIS IS FOOTER</h3>
+            <h3 align="center">THIS IS FOOTER</h3>
             <p>
 <!--                <img src="public/images/about-minion.jpeg" style="float: right">-->
 <!--                href="--><?//= base_url("public/css/weblog.css"); ?><!--"-->
-                FOOTER
             </p>
         </div>
     </div>
