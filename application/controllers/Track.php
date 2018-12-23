@@ -13,7 +13,12 @@ class Track extends CI_Controller {
     public function index()
     {
         $this->load->model('repair_model');
-        $data['repairs'] = $this->repair_model->get_all_repair();
+        if($this->repair_model->get_no_of_data() > 0){
+            $data['repairs'] = $this->repair_model->get_all_repair();
+        }else{
+            $data['repairs'] = null;
+        }
+
         $this->load->view('header');
         $this->load->view('track', $data);
         $this->load->view('footer');
