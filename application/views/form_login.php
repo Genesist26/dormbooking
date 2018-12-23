@@ -19,7 +19,7 @@
             $data = ['name' => 'password', 'id' => 'password'];
             echo form_password($data);
             ?>
-            <p><a href="#">Forgot your password?</a></p>
+            <p><br><a href="#">Forgot your password?</a></p>
 
         </div>
         <div id="lower">
