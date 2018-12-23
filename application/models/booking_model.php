@@ -18,6 +18,7 @@ class Booking_model extends CI_Model {
     public function have_an_booking()
     {
         $this->db->where('username', $this->session->userdata('username'));
+        $this->db->where('status', '0');
         $query = $this->db->get('booking');
         $data[] = null;
         if ($query->num_rows() > 0) {
@@ -42,5 +43,25 @@ class Booking_model extends CI_Model {
         }
         return FALSE;
     }
+
+    public function update_status($id){
+        $this->db->set('status', '1', FALSE);
+        $this->db->where('id', $id);
+        $this->db->update('	booking');
+        return TRUE;
+    }
+
+    public function get_a_queue($id){
+        $this->db->where('id', $id);
+        $query = $this->db->get('booking');
+        if ($query->num_rows() > 0) {
+            foreach ($query->result_array() as $item) {
+                $data[] = $item;
+            }
+            return $data;
+        }
+        return FALSE;
+    }
+
 
 }

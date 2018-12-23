@@ -42,4 +42,9 @@ class Repair extends CI_Controller {
         $this->load->view('footer');
 
     }
+
+    public function update_queue_status($queue_id){
+        $this->repair_model->update_status($queue_id);
+        redirect('repair','refresh');
+    }
 }

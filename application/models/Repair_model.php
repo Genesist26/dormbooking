@@ -47,6 +47,12 @@ class Repair_model extends CI_Model {
         return FALSE;
     }
 
+    public function update_status($id){
+        $this->db->set('status', '1', FALSE);
+        $this->db->where('id', $id);
+        $this->db->update('	repair');
+        return TRUE;
+    }
 
 
 }
