@@ -12,16 +12,18 @@ class Information extends CI_Controller {
 
     public function index()
     {
-        if(isset($_POST['subject'])){
-            $data['message'] = 'We have received your request.';
-            $this->load->view('header');
-            $this->load->view('message', $data);
-            $this->load->view('footer');
-        }else{
-            $this->load->view('header');
-            $this->load->view('information');
-            $this->load->view('footer');
+        $this->load->model('resident_model');
+
+        if($this->resident_model->get_no_of_data() > 0){
+            $data['information'] = $this->resident_model->get_all_information();
         }
+        else{
+            $data['information']= null;
+        }
+
+        $this->load->view('header');
+        $this->load->view('information', $data);
+        $this->load->view('footer');
 
 //        $this->load->view('welcome_message');
 

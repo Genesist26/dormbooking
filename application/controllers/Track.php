@@ -8,11 +8,12 @@ class Track extends CI_Controller {
         parent::__construct();
         // Load url helper
         $this->load->helper('url');
+        $this->load->model('repair_model');
     }
 
     public function index()
     {
-        $this->load->model('repair_model');
+
         if($this->repair_model->get_no_of_data() > 0){
             $data['repairs'] = $this->repair_model->get_all_repair();
         }else{

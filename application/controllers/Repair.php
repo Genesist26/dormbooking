@@ -8,6 +8,7 @@ class Repair extends CI_Controller {
         parent::__construct();
         // Load url helper
         $this->load->helper('url');
+        $this->load->model('repair_model');
     }
 
     public function index()
@@ -20,7 +21,6 @@ class Repair extends CI_Controller {
             $submit_data['detail'] = $this->input->post('detail', TRUE);
             unset($_POST);
 
-            $this->load->model('repair_model');
             $this->repair_model->insert_data($submit_data);
 
             $data['message'] = 'We have received your request.';
