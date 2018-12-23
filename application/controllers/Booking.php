@@ -29,13 +29,12 @@ class Booking extends CI_Controller {
             }else{
                 if(isset($_POST['dorm'])){
                     $submit_data['username'] = $this->session->userdata('username');
-                    $submit_data['dorm']  = $this->input->post('dorm', TRUE);
-                    $submit_data['checkin_due']  = $this->input->post('checkin_due', TRUE);
-                    $submit_data['mate_1']     = $this->input->post('mate_1', TRUE);
-                    $submit_data['mate_2']   = $this->input->post('mate_2', TRUE);
-                    $submit_data['mate_3']   = $this->input->post('mate_3', TRUE);
-                    $submit_data['status']   = '1';
-//                    var_dump($submit_data);
+                    $submit_data['dorm'] = $this->input->post('dorm', TRUE);
+                    $submit_data['checkin_due'] = $this->input->post('checkin_due', TRUE);
+                    $submit_data['mate_1'] = $this->input->post('mate_1', TRUE);
+                    $submit_data['mate_2'] = $this->input->post('mate_2', TRUE);
+                    $submit_data['mate_3'] = $this->input->post('mate_3', TRUE);
+                    $submit_data['status'] = '1';
                     unset($_POST);
 
                     $this->booking_model->insert_data($submit_data);
@@ -48,6 +47,7 @@ class Booking extends CI_Controller {
 //                    $this->load->view('form_booking');
 //                    var_dump($data['dorm_list']);
                     $this->load->view('form_booking', $data);
+                    echo '222';
 //                    var_dump($data);
                 }
             }

@@ -12,9 +12,7 @@
                     <label for="dorm">Dorm</label>
                 </div>
                 <div class="col-75">
-                    <select id="dorm">
-
-
+                    <select id="dorm" name="dorm">
                     <?php foreach ($dorm_list as $list) : ?>
                         <?php foreach ($list as $item) : ?>
                             <option value="<?=$item ?>"><?=$item ?></option>
