@@ -33,7 +33,7 @@ class Repair_model extends CI_Model {
         return $this->db->count_all_results('repair');
     }
 
-    public function get_all_repair_queue(){
+    public function get_all_queue(){
         $this->db->where('status', '0');
         $this->db->order_by('timestamp', 'DEC');
         $query = $this->db->get('repair');
@@ -45,9 +45,6 @@ class Repair_model extends CI_Model {
             return $data;
         }
         return FALSE;
-
-
-
     }
 
 

@@ -16,8 +16,7 @@ class Repair extends CI_Controller {
         $this->load->view('header');
 
         if($this->session->userdata('username') == 'admin'){
-//            echo 'Repair admin sesssion';
-            $data['queue'] = $this->repair_model->get_all_repair_queue();
+            $data['queue'] = $this->repair_model->get_all_queue();
 
             $this->load->view('manage_repair', $data);
         }else{

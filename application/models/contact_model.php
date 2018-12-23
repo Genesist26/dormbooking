@@ -14,6 +14,19 @@ class contact_model extends CI_Model {
         return $this->db->count_all_results('contact');
     }
 
+    public function get_all_queue(){
+        $this->db->where('status', '0');
+        $this->db->order_by('timestamp', 'DEC');
+        $query = $this->db->get('contact');
+
+        if ($query->num_rows() > 0) {
+            foreach ($query->result_array() as $item) {
+                $data[] = $item;
+            }
+            return $data;
+        }
+        return FALSE;
+    }
 
 
 }

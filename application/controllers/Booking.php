@@ -14,8 +14,10 @@ class Booking extends CI_Controller {
     public function index()
     {
         $this->load->view('header');
+
         if($this->session->userdata('username') == 'admin'){
-            $this->load->view('manage_booking');
+            $data['queue'] = $this->booking_model->get_all_queue();
+            $this->load->view('manage_booking', $data);
         }
         else{
             $isBooking = $this->booking_model->have_an_booking();
@@ -30,6 +32,7 @@ class Booking extends CI_Controller {
                     $submit_data['mate_1']     = $this->input->post('mate_1', TRUE);
                     $submit_data['mate_2']   = $this->input->post('mate_2', TRUE);
                     $submit_data['mate_3']   = $this->input->post('mate_3', TRUE);
+                    $submit_data['status']   = '0';
                     unset($_POST);
 
                     $this->booking_model->insert_data($submit_data);
