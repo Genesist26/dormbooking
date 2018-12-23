@@ -14,7 +14,7 @@ class Dorm_model extends CI_Model {
         for($f=$f_default; $f<=$data['max_floor']; $f++){
             for($r=1; $r<=$data['max_room']; $r++){
                 $data_dorm['dorm'] = $data['dorm'];
-                $data_dorm['room'] = str_pad($r, 3, '0', STR_PAD_LEFT);
+                $data_dorm['room'] = $f.str_pad($r, 2, '0', STR_PAD_LEFT);
                 $data_dorm['id_member_1'] = '';
                 $data_dorm['id_member_2'] = '';
                 $data_dorm['id_member_3'] = '';

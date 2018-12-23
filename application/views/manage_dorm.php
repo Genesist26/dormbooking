@@ -38,7 +38,7 @@
                     <input type="text" id="max_resident" name="max_resident" placeholder="example 2, 3, 4" required>
                 </div>
             </div>
-            <div class="row">
+            <div class="row">$room
                 <input type="checkbox" id="exclude_1st" name="exclude_1st" value="Submit" checked>
                 <label for="exclude_1st">Exclude 1st floor</label>
                 <input type="submit" value="Submit">
@@ -123,13 +123,11 @@
                 <td>207</td>
                 <td>3/4</td>
                 <td><a href="#">view</a></td>
-                <td><a href="#">remove</a></td>
             </tr>
             <tr>
                 <td>322</td>
                 <td>4/4</td>
                 <td><a href="#">view</a></td>
-                <td><a href="#">remove</a></td>
             </tr>
         </table>
     </div>
