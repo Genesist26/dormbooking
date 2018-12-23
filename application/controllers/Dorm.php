@@ -38,10 +38,14 @@ class Dorm extends CI_Controller {
 
 
         }elseif(isset($_POST['remv_dorm'])){        // remove form
+            $remv_dorm = $this->input->post('remv_dorm', TRUE);
+            $remv_room = $this->input->post('remv_room', TRUE);
+
             if(isset($_POST['all_room'])){          // remove all room (whole dorm)
-                echo 'all_room';
+                $this->dorm_list_model->remove_the_dorm($remv_dorm);
+                $this->dorm_model->remove_the_dorm($remv_dorm);
             }else{                                  // remove specificroom
-                echo 'remv_dorm';
+                $this->dorm_model->remove_the_room($remv_room);
             }
         }else{
             $this->load->view('manage_dorm');

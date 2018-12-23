@@ -24,4 +24,9 @@ class Dorm_list_model extends CI_Model {
 
     }
 
+    public function remove_the_dorm($data){
+        $this->db->where('dorm', $data);
+        return $this->db->delete('dorm_list');
+    }
+
 }

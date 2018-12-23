@@ -9,9 +9,7 @@ class Dorm_model extends CI_Model {
 
         if(! $exclude1st){
             $f_default = 1;
-            echo '222';
         }
-        var_dump($data);
 
         for($f=$f_default; $f<=$data['max_floor']; $f++){
             for($r=1; $r<=$data['max_room']; $r++){
@@ -27,6 +25,11 @@ class Dorm_model extends CI_Model {
 
 //        return $this->db->insert('dorm', $data);
 
+    }
+
+    public function remove_the_dorm($data){
+        $this->db->where('dorm', $data);
+        return $this->db->delete('dorm');
     }
 
 }

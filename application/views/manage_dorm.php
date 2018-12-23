@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="row">
-                <input type="checkbox" id="exclude_1st" name="exclude_1st" value="Submit">
+                <input type="checkbox" id="exclude_1st" name="exclude_1st" value="Submit" checked>
                 <label for="exclude_1st">Exclude 1st floor</label>
                 <input type="submit" value="Submit">
             </div>
@@ -59,14 +59,14 @@
             </div>
             <div class="row">
                 <div class="col-25">
-                    <label for="room">Room</label>
+                    <label for="remv_room">Room</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="max_foor" name="dorm" placeholder="example 4, 8, 10" required>
+                    <input type="text" id="remv_room" name="remv_room" placeholder="example 4, 8, 10">
                 </div>
             </div>
             <div class="row">
-                <input type="checkbox" id="all_room" name="all_room" value="Submit">
+                <input type="checkbox" id="all_room" name="all_room" value="Submit" checked>
                 <label for="all_room">Remove all(Dormitory)</label>
                 <input type="submit" value="Submit">
             </div>
