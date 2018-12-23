@@ -4,7 +4,7 @@ body {
 }
 
 a[href] {
-    color: #476286;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -53,10 +53,11 @@ blockquote p:last-child {
 
 header {
     padding: 40px 0;
+    color: white;
 }
 
 
-header h1 {
+header.site-header h1 {
     text-align: left;
     vertical-align: middle;
     font-size: 30px;
@@ -64,7 +65,7 @@ header h1 {
     margin: 0 auto;
     padding: 10px 10px 0 10px;
     max-width: 780px;
-    color: #5B636E;
+    color: #d5ffb2;
     display: inline;
 }
 
@@ -207,12 +208,15 @@ and (max-width: 780px) {
 
     header {
         padding: 0;
+        background-color: #545454;
+        color: #ffffff;
     }
 
     header h1 {
         font-size: 22px;
         line-height: 30px;
         text-align: center;
+        color: white;
     }
 
     nav ul {

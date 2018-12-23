@@ -12,9 +12,12 @@
     margin: auto;
 }
 
+
 .site-header {
     grid-area: header;
     padding-bottom: 20px;
+    background-color: #5b5d4b;
+    color: #ffffff;
 }
 .site-announcement {
     grid-area: announcement;
@@ -31,6 +34,7 @@
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
+
 .mb-3{
     text-align: center;
 }
