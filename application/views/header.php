@@ -51,7 +51,7 @@
         </nav>
     </header>
     <div class="site-announcement">
-        <div class="w3-content w3-display-container" style="max-width:800px">
+        <div class="w3-content w3-display-container" style="max-width:1200px">
             <img class="mySlides" src="public/images/coffee.jpg" style="width:100%">
             <img class="mySlides" src="public/images/sound.jpg" style="width:100%">
             <img class="mySlides" src="public/images/workbench.jpg" style="width:100%">

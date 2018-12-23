@@ -1,45 +1,163 @@
-<!--<link rel="stylesheet" href="public/css/homepate.css">-->
-<link rel="stylesheet" href="public/css/user_dashboard.css">
-<link rel="stylesheet" href="public/css/bootstrap.css">
+<link href="public/css/bootstrap.min.css" rel="stylesheet">
+<link href="public/css/sb-admin-2.css" rel="stylesheet">
+<link href="public/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <div class="site-main">
-    <!--<p align="center">user_dashboard_view.php</p>-->
 
-    <div class="h"> <h2>Dashboard</h2></div>
-    <!--<a class="btn btn-large" href="#"><i class="fa fa-wrench fa-2x "></i> Star</a>-->
-
-    <div class="icon1">
-        <i class=" fa fa-wrench fa-5x"></i>
-        <a href="#"><span class="pull-left"><a href="<?= base_url('repair'); ?>">Repair</a></span>
-        </a>
-        </a>
-    </div>
-    <div class="icon2">
-        <i class=" fa fa-search  fa-5x"></i>
-        <a href="#"><span class="pull-left"><a href="<?= base_url('track'); ?>">Track</a></span>
-        </a>
-    </div>
-    <div class="icon3">
-        <i class=" fa fa-exclamation-circle   fa-5x"></i>
-        <a href="#"><span class="pull-left"><a href="<?= base_url('information'); ?>">Information</a><br><br></span>
-        </a>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Dashboard</h1>
+        </div>
+        <!-- /.col-lg-12 -->
     </div>
 
+    <div class="row">
+        <div class="col-lg-12">
+            <!--                >>>>>>>>>>>>>>>-->
+            <div class="col-lg-4 col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa  fa-wrench fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+<!--                                <div class="huge">Repair</div>-->
+                                <div class="huge">Repair</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="panel-footer">
+                            <span class="pull-left"><a href="<?= base_url('repair'); ?>">Click!</a></span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!--                >>>>>>>>>>>>>>>-->
+            <div class="col-lg-4 col-md-6">
+                <div class="panel panel-green">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-search fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div >Track</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="panel-footer">
+                            <span class="pull-left"><a href="<?= base_url('track'); ?>">Click!</a></span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!--                >>>>>>>>>>>>>>>-->
+            <div class="col-lg-4 col-md-6">
+                <div class="panel panel-red">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-exclamation-circle fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div >Information</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#">
+                        <div class="panel-footer">
+                            <span class="pull-left"><a href="<?= base_url('information'); ?>">Click!</a></span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
-    <div class="icon4">
-        <i class=" fa fa-forward fa-5x"></i>
-        <a href="#"><span class="pull-left"><a href="<?= base_url('booking'); ?>">Booking/Move</a></span>
-        </a>
-    </div>
-    <div class="icon5">
-        <i class=" fa fa-envelope fa-5x"></i>
-        <a href="#"><span class="pull-left"><a href="<?= base_url('contact'); ?>">Contact Us</a></span>
-        </a>
-    </div>
-    <div class="icon6">
-        <i class=" fa fa-gears fa-5x"></i>
-        <a href="#"><span class="pull-left">  <a href="<?= base_url('Setting'); ?>">Setting</a></span>
-        </a>
-    </div>
+            <!--                >>>>>>>>>>>>>>>-->
+
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-forward fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div >Booking/Move</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left"><a href="<?= base_url('booking'); ?>">Click!</a></span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
 
+
+            <!--                >>>>>>>>>>>>>>>-->
+
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-envelope fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">Contact Us</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left"><a href="<?= base_url('contact'); ?>">Click!</a></span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--                >>>>>>>>>>>>>>>-->
+                <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-gears fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">Setting</div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left"><a href="<?= base_url('Setting'); ?>">Click!</a></span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <!--                >>>>>>>>>>>>>>>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 </div>
