@@ -3,7 +3,6 @@
 <link href="public/css/sb-admin-2.css" rel="stylesheet">
 <link href="public/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <div class="site-main">
-
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Dashboard</h1>
@@ -22,7 +21,7 @@
                                 <i class="fa  fa-wrench fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge">26</div>
+                                <div class="huge"><?= $no_of_repair ?></div>
                                 <div>Repair</div>
                             </div>
                         </div>
@@ -45,7 +44,7 @@
                                 <i class="fa fa-list-alt fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge">12</div>
+                                <div class="huge"><?= $no_of_booking ?></div>
                                 <div>Booking</div>
                             </div>
                         </div>
@@ -68,7 +67,7 @@
                                 <i class="fa fa-phone-square fa-5x"></i>
                             </div>
                             <div class="col-xs-9 text-right">
-                                <div class="huge">124</div>
+                                <div class="huge"><?= $no_of_contact ?></div>
                                 <div>Contact</div>
                             </div>
                         </div>
