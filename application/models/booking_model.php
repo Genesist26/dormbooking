@@ -18,7 +18,7 @@ class Booking_model extends CI_Model {
     public function have_an_booking()
     {
         $this->db->where('username', $this->session->userdata('username'));
-        $this->db->where('status', '0');
+        $this->db->where('status', '1');
         $query = $this->db->get('booking');
         $data[] = null;
         if ($query->num_rows() > 0) {
@@ -31,7 +31,7 @@ class Booking_model extends CI_Model {
     }
 
     public function get_all_queue(){
-        $this->db->where('status', '0');
+        $this->db->where('status', '1');
         $this->db->order_by('timestamp', 'DEC');
         $query = $this->db->get('booking');
 
