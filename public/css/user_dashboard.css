@@ -1,4 +1,49 @@
 .site-main{
   display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+          "h h h "
+          "icon1 icon2 icon3"
+          "icon4 icon5 icon6";
+}
 
+.h{
+  grid-area: h;
+  max-height: 50px;
+  text-align: center;
+}
+.icon1{
+  grid-area: icon1;
+  background-color: #f2d8e3;
+  padding-right: 50px;
+}
+.icon2{
+  grid-area: icon2;
+  background-color: #cdb9f2;
+  padding-right: 50px;
+}
+.icon3{
+   grid-area: icon3;
+   background-color: #d6f2df;
+   padding-right: 50px;
+ }
+.icon4{
+  grid-area: icon4;
+  background-color: #cdb9f2;
+  padding-right: 50px;
+}
+.icon5{
+  grid-area: icon5;
+  background-color: #dceff2;
+  padding-right: 50px;
+}
+.icon6{
+  grid-area: icon6;
+  background-color:  #f2d8e3;
+  padding-right: 50px;
+}
+
+.pull-left{
+  text-align: center;
 }
