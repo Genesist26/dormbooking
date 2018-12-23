@@ -29,4 +29,6 @@ class Dorm_list_model extends CI_Model {
         return $this->db->delete('dorm_list');
     }
 
+
+
 }

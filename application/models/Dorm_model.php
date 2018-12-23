@@ -32,4 +32,10 @@ class Dorm_model extends CI_Model {
         return $this->db->delete('dorm');
     }
 
+    public function remove_the_room($dorm, $room){
+        $this->db->where('dorm', $dorm);
+        $this->db->where('room', $room);
+        return $this->db->delete('dorm');
+    }
+
 }

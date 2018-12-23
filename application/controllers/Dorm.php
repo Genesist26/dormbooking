@@ -45,7 +45,7 @@ class Dorm extends CI_Controller {
                 $this->dorm_list_model->remove_the_dorm($remv_dorm);
                 $this->dorm_model->remove_the_dorm($remv_dorm);
             }else{                                  // remove specificroom
-                $this->dorm_model->remove_the_room($remv_room);
+                $this->dorm_model->remove_the_room($remv_dorm, $remv_room);
             }
         }else{
             $this->load->view('manage_dorm');
