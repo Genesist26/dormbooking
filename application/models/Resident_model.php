@@ -40,13 +40,13 @@ class Resident_model extends CI_Model {
     public function get_no_of_data()
     {
         $this->db->where('username', $this->session->userdata('username'));
-        return $this->db->count_all_results('repair');
+        return $this->db->count_all_results('resident');
     }
 
     public function is_in_dorm()
     {
         $this->db->where('username', $this->session->userdata('username'));
-        return $this->db->count_all_results('repair')?0:1;
+        return $this->db->count_all_results('resident')?1:0;
     }
 
 }

@@ -9,58 +9,29 @@ class Information extends CI_Controller {
         // Load url helper
         $this->load->helper('url');
         $this->load->model('resident_model');
+        $this->load->model('booking_model');
     }
 
     public function index()
     {
-
         $this->load->view('header');
         $in_dorm = $this->resident_model->is_in_dorm();
-        if($in_dorm){
+        if($in_dorm){   // in dorm
             if($this->resident_model->get_no_of_data() > 0){
                 $data['information'] = $this->resident_model->get_all_information();
+                $this->load->view('information', $data);
             }
-            else{
-                $data['information']= null;
-            }
-            $this->load->view('information', $data);
-
         }
-        else{
-            $data['message'] = 'You need to booking a dorm first';
+        else{           // no dorm
+
+            if($this->booking_model->have_an_booking()){     // have a booking
+                $data['message'] = 'Waiting for confirmation';
+            }else {                                          // no a booking
+                $data['message'] = 'You need to booking a dorm first';
+            }
             $this->load->view('message', $data);
         }
         $this->load->view('footer');
-
-//        $this->load->view('welcome_message');
-
-
-//        // Load model post_model.php
-//        $this->load->model('post_model');
-//
-//        // $data['posts'] = $this->post_model->get_all_posts();
-//
-//        // Load pagination library
-//        $this->load->library('pagination');
-//        // init params
-//        $limit_per_page = 3;
-//        $start_index = $this->uri->segment(3) ? $this->uri->segment(3) : 0 ;
-//        $total_records = $this->post_model->get_no_of_data();
-//
-//        if ($total_records > 0) {
-//            // get current page records
-//            $data['posts'] = $this->post_model->show_post_pagination($limit_per_page, $start_index);
-//
-//            $config['base_url'] = base_url('/main/index/');
-//            $config['total_rows'] = $total_records;
-//            $config['per_page'] = $limit_per_page;
-//            $this->pagination->initialize($config);
-//            $data['pagination_link'] = $this->pagination->create_links();
-//        }
-//
-//        $this->load->view('header');
-//        $this->load->view('content', $data);
-//        $this->load->view('footer');
 
     }
 }

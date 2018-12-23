@@ -14,18 +14,24 @@ class Contact extends CI_Controller {
 
     public function index()
     {
-        if(isset($_POST['subject'])){
-            $this->add_date();
-            $data['message'] = 'We have received your request.';
-            $this->load->view('header');
-            $this->load->view('message', $data);
-            $this->load->view('footer');
-            unset($_POST);
-        }else{
-            $this->load->view('header');
-            $this->load->view('contact');
-            $this->load->view('footer');
+        $this->load->view('header');
+        if($this->session->userdata('username') == 'admin'){
+            $this->load->view('manage_contact');
         }
+        else{
+            if(isset($_POST['subject'])){
+                $this->add_date();
+                $data['message'] = 'We have received your contact message.';
+
+                $this->load->view('message', $data);
+                unset($_POST);
+            }else{
+                $this->load->view('form_contact');
+
+            }
+        }
+        $this->load->view('footer');
+
     }
 
     public function add_date(){
