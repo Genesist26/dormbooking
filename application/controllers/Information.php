@@ -8,21 +8,28 @@ class Information extends CI_Controller {
         parent::__construct();
         // Load url helper
         $this->load->helper('url');
+        $this->load->model('resident_model');
     }
 
     public function index()
     {
-        $this->load->model('resident_model');
-
-        if($this->resident_model->get_no_of_data() > 0){
-            $data['information'] = $this->resident_model->get_all_information();
-        }
-        else{
-            $data['information']= null;
-        }
 
         $this->load->view('header');
-        $this->load->view('information', $data);
+        $in_dorm = $this->resident_model->is_in_dorm();
+        if($in_dorm){
+            if($this->resident_model->get_no_of_data() > 0){
+                $data['information'] = $this->resident_model->get_all_information();
+            }
+            else{
+                $data['information']= null;
+            }
+            $this->load->view('information', $data);
+
+        }
+        else{
+            $data['message'] = 'You need to booking a dorm first';
+            $this->load->view('message', $data);
+        }
         $this->load->view('footer');
 
 //        $this->load->view('welcome_message');

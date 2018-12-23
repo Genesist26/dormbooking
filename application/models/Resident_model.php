@@ -43,4 +43,10 @@ class Resident_model extends CI_Model {
         return $this->db->count_all_results('repair');
     }
 
+    public function is_in_dorm()
+    {
+        $this->db->where('username', $this->session->userdata('username'));
+        return $this->db->count_all_results('repair')?0:1;
+    }
+
 }
