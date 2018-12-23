@@ -9,6 +9,7 @@ class Booking extends CI_Controller {
         // Load url helper
         $this->load->helper('url');
         $this->load->model('booking_model');
+        $this->load->model('dorm_list_model');
         $this->load->model('resident_model');
     }
 
@@ -33,7 +34,7 @@ class Booking extends CI_Controller {
                     $submit_data['mate_1']     = $this->input->post('mate_1', TRUE);
                     $submit_data['mate_2']   = $this->input->post('mate_2', TRUE);
                     $submit_data['mate_3']   = $this->input->post('mate_3', TRUE);
-                    $submit_data['status']   = '0';
+                    $submit_data['status']   = '1';
 //                    var_dump($submit_data);
                     unset($_POST);
 
@@ -43,7 +44,11 @@ class Booking extends CI_Controller {
                     $this->load->view('message', $data);
                     unset($_POST);
                 }else{
-                    $this->load->view('form_booking');
+                    $data['dorm_list'] = $this->dorm_list_model->get_dorm_list();
+//                    $this->load->view('form_booking');
+//                    var_dump($data['dorm_list']);
+                    $this->load->view('form_booking', $data);
+//                    var_dump($data);
                 }
             }
         }

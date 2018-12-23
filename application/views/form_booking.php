@@ -8,10 +8,20 @@
         <form action="booking" method="post">
             <div class="row">
                 <div class="col-25">
+
                     <label for="dorm">Dorm</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="dorm" name="dorm" placeholder="dorm" required>
+                    <select id="dorm">
+
+
+                    <?php foreach ($dorm_list as $list) : ?>
+                        <?php foreach ($list as $item) : ?>
+                            <option value="<?=$item ?>"><?=$item ?></option>
+                        <?php endforeach; ?>
+                    <?php endforeach; ?>
+                    </select>
+<!--                    <input type="text" id="dorm" name="dorm" placeholder="dorm" required>-->
                 </div>
             </div>
             <div class="row">
