@@ -9,6 +9,7 @@ class Booking extends CI_Controller {
         // Load url helper
         $this->load->helper('url');
         $this->load->model('booking_model');
+        $this->load->model('resident_model');
     }
 
     public function index()
@@ -33,6 +34,7 @@ class Booking extends CI_Controller {
                     $submit_data['mate_2']   = $this->input->post('mate_2', TRUE);
                     $submit_data['mate_3']   = $this->input->post('mate_3', TRUE);
                     $submit_data['status']   = '0';
+//                    var_dump($submit_data);
                     unset($_POST);
 
                     $this->booking_model->insert_data($submit_data);
@@ -46,7 +48,31 @@ class Booking extends CI_Controller {
             }
         }
         $this->load->view('footer');
+    }
 
+    public function update_queue_status($queue_id){
+        $success = $this->booking_model->update_status($queue_id);
+        if($success){
+            $this->checkin($queue_id);
+            echo 'checkin completed<br>';
+        }else{
+            echo 'checkin not complete<br>';
+        }
+        redirect('booking','refresh');
+    }
+
+    public function checkin($queue_id){
+        $data = $this->booking_model->get_a_queue($queue_id);
+        foreach ($data as $item){
+            $booking_data['username'] = $item['username'];
+            $booking_data['dorm'] = $item['dorm'];
+            $booking_data['room'] = '310';
+            $booking_data['checkin'] = $item['checkin_due'];
+            $booking_data['checkout_due'] = $item['checkin_due'];
+            $booking_data['status'] = '0';
+        }
+
+        $this->resident_model->insert_data($booking_data);
 
     }
 }

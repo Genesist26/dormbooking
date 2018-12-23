@@ -3,25 +3,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Resident_model extends CI_Model {
 
-    public function add_new_user($username, $password)
-    {
-        $this->db->where('username', $username);
-        $query = $this->db->get('user');
-
-        if ($query->num_rows() > 0)
-        {
-            $row = $query->row();
-            $hash = $row->password;
-            if ($password == $hash) {
-                return $row->username;
-            }
-        }
-        return FALSE;
-    }
-
     public function insert_data($data)
     {
-        return $this->db->insert('user', $data);
+        return $this->db->insert('resident', $data);
     }
 
     public function get_all_information()

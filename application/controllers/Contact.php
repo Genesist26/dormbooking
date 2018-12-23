@@ -45,4 +45,9 @@ class Contact extends CI_Controller {
 
         $this->contact_model->insert_data($submit_data);
     }
+
+    public function update_queue_status($queue_id){
+        $this->contact_model->update_status($queue_id);
+        redirect('contact','refresh');
+    }
 }
