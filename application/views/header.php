@@ -6,7 +6,7 @@
     <title>Microblog</title>
 
     <link rel="stylesheet" href="<?= base_url("public/css/style.css"); ?>">
-
+    <link href="<?= base_url('public/css/bootstrap.min.css" rel="stylesheet')?>">
     <link rel="stylesheet" href="<?= base_url("public/css/weblog.css"); ?>" media="screen">
     <link href="https://fonts.googleapis.com/css?family=Taviraj:300" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -41,7 +41,6 @@
                     <li><a href="<?= base_url(); ?>">Home</a></li>
                     <li><a href="#footer">About</a></li>
                     <?php if ( $this->session->logged_in ) : ?>
-                        <li><a href="<?= base_url('form'); ?>">New Post</a></li>
                         <li><a href="<?= base_url('logout'); ?>">Logout</a></li>
                     <?php else: ?>
                         <li><a href="<?= base_url('login'); ?>">Login</a></li>
