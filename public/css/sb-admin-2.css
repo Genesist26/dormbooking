@@ -11,9 +11,6 @@
   min-height: 568px;
   background-color: white;
 }
-.panel{
-  min-width: 700px;
-}
 @media (min-width: 768px) {
   #page-wrapper {
     position: inherit;
@@ -245,7 +242,6 @@ table.dataTable thead .sorting:after {
   border-color: #5cb85c;
   color: white;
   background-color: #5cb85c;
-  max-width: 200px;
 }
 .panel-green > a {
   color: #5cb85c;

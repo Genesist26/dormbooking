@@ -22,7 +22,7 @@
                             </div>
                             <div class="col-xs-9 text-right">
 <!--                                <div class="huge">Repair</div>-->
-                                <div class="huge">Repair</div>
+                                <div >Repair</div>
                             </div>
                         </div>
                     </div>
@@ -119,7 +119,7 @@
                                     <i class="fa fa-envelope fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">Contact Us</div>
+                                    <div >Contact Us</div>
                                 </div>
                             </div>
                         </div>
@@ -141,7 +141,7 @@
                                     <i class="fa fa-gears fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">Setting</div>
+                                    <div >Setting</div>
 
                                 </div>
                             </div>
