@@ -23,6 +23,7 @@ class Signup extends CI_Controller {
         if(isset($_POST['username'])){
             $submit_data['username'] = $this->input->post('username', TRUE);
             $submit_data['password'] = $this->input->post('password', TRUE);
+            $submit_data['name']     = $this->input->post('name', TRUE);
             $submit_data['question'] = $this->input->post('question', TRUE);
             $submit_data['answer']   = $this->input->post('answer', TRUE);
             unset($_POST);

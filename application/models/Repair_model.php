@@ -10,10 +10,8 @@ class Repair_model extends CI_Model {
 
     public function get_all_repair()
     {
-        if ( empty($this->session->logged_in) ) {
-            $this->db->where('username', $this->session->userdata('username'));
-        }
-
+        echo 'username = '.$this->session->userdata('username');
+        $this->db->where('username', $this->session->userdata('username'));
         $this->db->order_by('timestamp', 'ASC');
         $query = $this->db->get('repair');
         if ($query->num_rows() > 0) {
@@ -24,5 +22,7 @@ class Repair_model extends CI_Model {
         }
         return FALSE;
     }
+
+
 
 }
