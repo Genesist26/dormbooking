@@ -16,21 +16,21 @@ h1, h2, h3, h4 {
     color: #666666;
 }
 
-img {
-    max-width: 100%;
-    border-radius: 15px;
-    -webkit-transition: -webkit-transform 4s ease 0s;
-    -moz-transition: -moz-transform 4s ease 0s;
-    -o-transition: -o-transform 4s ease 0s;
-    transition: transform 4s ease 0s;
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-}
+/*img {*/
+    /*max-width: 100%;*/
+    /*border-radius: 15px;*/
+    /*-webkit-transition: -webkit-transform 4s ease 0s;*/
+    /*-moz-transition: -moz-transform 4s ease 0s;*/
+    /*-o-transition: -o-transform 4s ease 0s;*/
+    /*transition: transform 4s ease 0s;*/
+    /*-webkit-transform: scale3d(1, 1, 1);*/
+    /*transform: scale3d(1, 1, 1);*/
+/*}*/
 
-img:hover {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(-2deg);
-    transform: scale3d(1.1, 1.1, 1.1) rotate(-2deg);
-}
+/*img:hover {*/
+    /*-webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(-2deg);*/
+    /*transform: scale3d(1.1, 1.1, 1.1) rotate(-2deg);*/
+/*}*/
 
 blockquote {
     background-color: #F0F2F5;
