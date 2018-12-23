@@ -8,21 +8,30 @@ class Setting extends CI_Controller {
         parent::__construct();
         // Load url helper
         $this->load->helper('url');
+        $this->load->model('user_model');
     }
 
     public function index()
     {
-        if(isset($_POST['dorm'])){
-            $data['message'] = 'We have received your request.';
-            $this->load->view('header');
+        $this->load->view('header');
+        if(isset($_POST['password'])){
+            $is_change = $this->user_model->change_password($_POST['answer'], $_POST['password']);
+            if($is_change){
+                $data['message'] = 'Your password has been changed';
+            }
+            else{
+                $data['message'] = 'Your password not change. Incorrect answer';
+            }
             $this->load->view('message', $data);
-            $this->load->view('footer');
+
             unset($_POST);
         }else{
-            $this->load->view('header');
-            $this->load->view('setting');
-            $this->load->view('footer');
+            $data['setting'] = $this->user_model->get_setting();
+            $this->load->view('user_setting', $data);
+
         }
+        $this->load->view('footer');
 
     }
+
 }

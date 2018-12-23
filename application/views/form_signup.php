@@ -20,7 +20,7 @@
                     <label for="password">Password</label>
                 </div>
                 <div class="col-75">
-                    <input type="password" id="password" name="password" placeholder="6-16 character" minlength="6" maxlength="16" size="16" required>
+                    <input type="password" id="password" name="password" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 5 characters' : ''); if(this.checkValidity()) form.password_two.pattern = this.value;" placeholder="Password" minlength="5" maxlength="16" size="16" required>
                 </div>
             </div>
             <div class="row">
@@ -28,7 +28,7 @@
                     <label for="confirm_password">Confirm Password</label>
                 </div>
                 <div class="col-75">
-                    <input type="password" id="confirm_password" name="confirm_password" placeholder="6-16 character" minlength="6" maxlength="16" size="16" required>
+                    <input type="password" id="password_two" name="password_two" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" placeholder="Verify Password" minlength="5" maxlength="16" size="16" required>
                 </div>
             </div>
             <div class="row">
