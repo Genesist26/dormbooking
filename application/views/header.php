@@ -41,7 +41,7 @@
                     <li><a href="<?= base_url(); ?>">Home</a></li>
                     <li><a href="#footer">About</a></li>
                     <?php if ( $this->session->logged_in ) : ?>
-                        <li><a href="<?= base_url('form'); ?>">New Post </a></li>
+                        <li><a href="<?= base_url('form'); ?>">New Post</a></li>
                         <li><a href="<?= base_url('logout'); ?>">Logout</a></li>
                     <?php else: ?>
                         <li><a href="<?= base_url('login'); ?>">Login</a></li>
@@ -51,10 +51,10 @@
         </nav>
     </header>
     <div class="site-announcement">
-        <div class="w3-content w3-display-container" style="max-width: 1200px">
-            <img class="mySlides" src="public/images/coffee.jpg" style="width: 100%">
-            <img class="mySlides" src="public/images/sound.jpg" style="width: 100%">
-            <img class="mySlides" src="public/images/workbench.jpg" style="width: 100%">
+        <div class="w3-content w3-display-container" style="max-width:1200px">
+            <img class="mySlides" src="public/images/coffee.jpg" style="width:100%">
+            <img class="mySlides" src="public/images/sound.jpg" style="width:100%">
+            <img class="mySlides" src="public/images/workbench.jpg" style="width:100%">
             <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
 
                 <!--        move button-->

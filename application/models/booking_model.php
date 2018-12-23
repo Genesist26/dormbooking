@@ -63,5 +63,11 @@ class Booking_model extends CI_Model {
         return FALSE;
     }
 
+    public function get_no_of_noti()
+    {
+        $this->db->where('status', '0');
+        return $this->db->count_all_results('booking');
+    }
+
 
 }

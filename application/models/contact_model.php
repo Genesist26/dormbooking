@@ -34,4 +34,9 @@ class contact_model extends CI_Model {
         $this->db->update('	contact');
         return TRUE;
     }
+
+    public function get_no_of_noti(){
+        $this->db->where('status', '0');
+        return $this->db->count_all_results('contact');
+    }
 }
