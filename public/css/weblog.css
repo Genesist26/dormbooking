@@ -4,7 +4,7 @@ body {
 }
 
 a[href] {
-    color: #ffffff;
+    color: #5bbbaa;
     text-decoration: none;
 }
 
@@ -209,7 +209,7 @@ and (max-width: 780px) {
     header {
         padding: 0;
         background-color: #545454;
-        color: #ffffff;
+        color: #211fbb;
     }
 
     header h1 {
