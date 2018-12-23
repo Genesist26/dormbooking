@@ -18,7 +18,6 @@ class Dorm extends CI_Controller {
     {
         $this->load->view('header');
         if(isset($_POST['new_dorm'])){      // add form
-            echo 'new_dorm';
             $submit_data['dorm'] = $this->input->post('new_dorm', TRUE);
             $submit_data['max_floor'] = $this->input->post('max_floor', TRUE);
             $submit_data['max_room'] = $this->input->post('max_room', TRUE);

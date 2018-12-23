@@ -29,6 +29,19 @@ class Dorm_list_model extends CI_Model {
         return $this->db->delete('dorm_list');
     }
 
+    public function get_dorm_list(){
+        $this->db->select('dorm');
+        $query = $this->db->get('dorm_list');
+        if ($query->num_rows() > 0) {
+            foreach ($query->result_array() as $item) {
+                $data[] = $item;
+            }
+            return $data;
+        }
+        return FALSE;
+
+    }
+
 
 
 }

@@ -12,6 +12,7 @@
                 </div>
                 <div class="col-75">
                     <input type="text" id="new_dorm" name="new_dorm" placeholder="example C10, M1, F5" required>
+
                 </div>
             </div>
             <div class="row">
@@ -38,7 +39,7 @@
                     <input type="text" id="max_resident" name="max_resident" placeholder="example 2, 3, 4" required>
                 </div>
             </div>
-            <div class="row">$room
+            <div class="row">
                 <input type="checkbox" id="exclude_1st" name="exclude_1st" value="Submit" checked>
                 <label for="exclude_1st">Exclude 1st floor</label>
                 <input type="submit" value="Submit">
