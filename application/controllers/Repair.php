@@ -16,8 +16,9 @@ class Repair extends CI_Controller {
         $this->load->view('header');
 
         if($this->session->userdata('username') == 'admin'){
-//            echo 'Repair admin sesssion';
-            $this->load->view('manage_repair');
+            $data['queue'] = $this->repair_model->get_all_queue();
+
+            $this->load->view('manage_repair', $data);
         }else{
             if(isset($_POST['subject'])){
                 $submit_data['username'] = $this->session->userdata('username');
@@ -25,6 +26,7 @@ class Repair extends CI_Controller {
                 $submit_data['room'] = $this->input->post('room', TRUE);
                 $submit_data['object'] = $this->input->post('object', TRUE);
                 $submit_data['detail'] = $this->input->post('detail', TRUE);
+                $submit_data['status'] = '0';
                 unset($_POST);
 
                 $this->repair_model->insert_data($submit_data);

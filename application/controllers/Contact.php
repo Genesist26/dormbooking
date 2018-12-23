@@ -16,7 +16,9 @@ class Contact extends CI_Controller {
     {
         $this->load->view('header');
         if($this->session->userdata('username') == 'admin'){
-            $this->load->view('manage_contact');
+            $data['queue'] = $this->contact_model->get_all_queue();
+
+            $this->load->view('manage_contact', $data);
         }
         else{
             if(isset($_POST['subject'])){
@@ -38,6 +40,7 @@ class Contact extends CI_Controller {
         $submit_data['username'] = $this->session->userdata('username');
         $submit_data['subject']  = $this->input->post('subject', TRUE);
         $submit_data['detail']   = $this->input->post('detail', TRUE);
+        $submit_data['status']   = '0';
         unset($_POST);
 
         $this->contact_model->insert_data($submit_data);

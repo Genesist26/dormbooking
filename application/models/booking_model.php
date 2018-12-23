@@ -29,4 +29,18 @@ class Booking_model extends CI_Model {
         return FALSE;
     }
 
+    public function get_all_queue(){
+        $this->db->where('status', '0');
+        $this->db->order_by('timestamp', 'DEC');
+        $query = $this->db->get('booking');
+
+        if ($query->num_rows() > 0) {
+            foreach ($query->result_array() as $item) {
+                $data[] = $item;
+            }
+            return $data;
+        }
+        return FALSE;
+    }
+
 }
