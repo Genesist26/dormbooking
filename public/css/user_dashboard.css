@@ -6,6 +6,8 @@
           "h h h "
           "icon1 icon2 icon3"
           "icon4 icon5 icon6";
+    position: fixed;
+
 }
 
 .h{

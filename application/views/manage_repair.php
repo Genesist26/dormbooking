@@ -11,23 +11,25 @@
             border: 1px solid black;
             padding: 5px;
         }
-        th{
+
+        th {
             background-color: #9fcdff;
         }
     </style>
-<?php
+    <?php
     echo " <table>
         <tr>
             <th>ID</th>
-            <th>username</th>
-            <th>subject</th>
-            <th>room</th>
-            <th>object</th>
-            <th>detail</th>
-            <th>status</th>
-            <th>timestamp</th>
-        </tr>";?>
-        <?php foreach ($queue as $item):?>
+            <th>Username</th>
+            <th>Subject</th>
+            <th>Room</th>
+            <th>Object</th>
+            <th>Detail</th>
+            <th>Status</th>
+            <th>Timestamp</th>
+        </tr>"; ?>
+    <?php if($queue!=FALSE): ?>
+    <?php foreach ($queue as $item): ?>
 
             <?php
             $queue_id = $item['id'];
@@ -44,6 +46,7 @@
                 <td><a href="<?= base_url("repair/update_queue_status/$queue_id"); ?>">complete</a><br></td>
             </tr>
         <?php endforeach;?>
+    <?php endif;?>
 
     </table>
 </div>

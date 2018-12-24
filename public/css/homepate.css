@@ -5,7 +5,7 @@
  */
 
 body {
-  font-family: 'Lora';
+  /*font-family: 'Lora';*/
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.65)));
   background: linear-gradient(rgba(47, 23, 15, 0.65));
   background-attachment: fixed;
@@ -51,10 +51,9 @@ p {
 }
 
 .page-section {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
-
 .section-heading {
   text-transform: uppercase;
 }
@@ -73,11 +72,12 @@ p {
 
 .bg-faded {
   background-color: rgba(213, 255, 178, 0.85);
+  padding-left: 50px;
 }
 
 #mainNav {
   background-color: rgba(47, 23, 15, 0.9);
-  font-family: 'Raleway';
+  font-family: 'Raleway';;
 }
 
 #mainNav .navbar-brand {
@@ -111,18 +111,28 @@ p {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   padding-left: 2rem;
-  padding-right: 2rem;
+
 }
 
 .intro {
   position: relative;
+  padding-left: 50px;
 }
+.intro-button{
+  padding-right: 250px;
+  padding-bottom: 10px;
+}.intro-img{
+  padding-right: 50px;
+ }
 
 
 @media (min-width: 1200px) {
   .intro .intro-text {
     width: 45%;
-    max-height: 400px;
+    max-height: 250px;
+    padding-left: 20px;
+    padding-right: 20px;
+
   }
 }
 
@@ -210,6 +220,7 @@ p {
 
 .footer {
   background-color: rgba(47, 23, 15, 0.9);
+
 }
 
 .text-primary {
@@ -233,6 +244,7 @@ p {
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background-color: #df902a;
   border-color: #df902a;
+  text-align: center;
 }
 
 .font-weight-light {

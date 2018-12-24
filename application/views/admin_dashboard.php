@@ -1,7 +1,7 @@
-
-<link href="public/css/bootstrap.min.css" rel="stylesheet">
-<link href="public/css/sb-admin-2.css" rel="stylesheet">
-<link href="public/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="<?= base_url("public/css/homepate.css"); ?>">
+<link  rel="stylesheet" href="<?= base_url("public/css/bootstrap.min.css"); ?>">
+<link rel="stylesheet" href="<?= base_url("public/css/sb-admin-2.css"); ?>" >
+<link rel="stylesheet" type="text/css" href="<?= base_url("public/css/font-awesome.min.css"); ?>">
 <div class="site-main">
     <div class="row">
         <div class="col-lg-12">

@@ -18,6 +18,7 @@
     padding-bottom: 20px;
     background-color: #5b5d4b;
     color: #ffffff;
+
 }
 .site-announcement {
     grid-area: announcement;
@@ -105,33 +106,7 @@
     border-color: #df902a;
 }
 
-.post {
-    display: grid;
-    grid-template-columns: 70px auto;
-    grid-template-areas:
-            "avatar content";
-    background-color: #fff;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.post-avatar {
-    grid-area: avatar;
-    background-color: #F0F2F5;
-    padding: 10px;
-}
-
-.post-content {
-    grid-area: content;
-    background-color: #F0F2F5;
-    padding: 10px;
-}
-
-.post-content p {
-    margin-top: 0;
-}
-
-
 .site-footer {
     grid-area: footer;
+
 }

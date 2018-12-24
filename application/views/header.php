@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Microblog</title>
+    <title>Dorm Booking</title>
 
     <link rel="stylesheet" href="<?= base_url("public/css/style.css"); ?>">
     <link href="<?= base_url('public/css/bootstrap.min.css" rel="stylesheet')?>">
@@ -34,9 +34,9 @@
 <div class="container">
 
     <header class="site-header">
-        <h1><a href="#">Dorm Booking</a></h1>
+        <h1>Dorm Booking</h1>
         <nav>
-            <span class="menu">
+            <span class="menu" >
                 <ul>
                     <li><a href="<?= base_url(); ?>">Home</a></li>
                     <li><a href="#footer">About</a></li>
@@ -51,9 +51,9 @@
     </header>
     <div class="site-announcement">
         <div class="w3-content w3-display-container" style="max-width:1200px">
-            <img class="mySlides" src="public/images/coffee.jpg" style="width:100%">
-            <img class="mySlides" src="public/images/sound.jpg" style="width:100%">
-            <img class="mySlides" src="public/images/workbench.jpg" style="width:100%">
+            <img class="mySlides" src="public/images/dorm1.png" style="width:100%">
+            <img class="mySlides" src="public/images/dorm2.png" style="width:100%">
+            <img class="mySlides" src="public/images/dorm3.png" style="width:100%">
             <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
 
                 <!--        move button-->

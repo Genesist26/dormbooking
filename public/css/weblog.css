@@ -1,10 +1,14 @@
 body {
-    font-family: 'Taviraj', serif;;
+    font-family: 'Raleway';;
     line-height: 24px;
 }
 
 a[href] {
-    color: #5bbbaa;
+    color: #211fbb;
+    text-decoration: none;
+}
+header a[href] {
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -63,10 +67,12 @@ header.site-header h1 {
     font-size: 30px;
     line-height: 32px;
     margin: 0 auto;
-    padding: 10px 10px 0 10px;
+    padding: 50px 10px 0 10px;
     max-width: 780px;
-    color: #d5ffb2;
+    color: #ffffff;
     display: inline;
+    /*font-family: 'Raleway';*/
+
 }
 
 /* Navigation */
@@ -137,6 +143,7 @@ footer {
     background-color: #545454;
     color: #ffffff;
     margin: 0;
+
 }
 
 .footer_text {
@@ -170,7 +177,7 @@ form {
     margin-bottom: 40px;
 }
 button, input, select, textarea {
-    font-family : inherit;
+    font-family: "Raleway";;
     font-size   : 100%;
 }
 
@@ -181,6 +188,7 @@ button, input, select, textarea {
 .bg-green {
     background-color: #ccff00;
 }
+
 
 /* End background color for post */
 
@@ -210,6 +218,8 @@ and (max-width: 780px) {
         padding: 0;
         background-color: #545454;
         color: #211fbb;
+        max-width: 1200px;
+        font-size: 20px;
     }
 
     header h1 {
